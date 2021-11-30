@@ -514,9 +514,6 @@ class QtBase(ConanFile):
     def package(self):
         self.python_requires["qt-conan-common"].module.call_install(self)
 
-        with open(os.path.join(self.package_folder, "bin", "qt.conf"), "w") as f:
-            f.write("[Paths]\nPrefix = ..\n")
-
     def package_info(self):
         self.python_requires["qt-conan-common"].module.package_info(self)
 
